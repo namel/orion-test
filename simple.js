@@ -6,10 +6,7 @@
 function flip(s,p1,p2)
 {
 	if (p1 === p2) return s;
-	var c = s[p1];
-	s[p1] = s[p2];
-	s[p2] = c;
-	return s;
+	return s.substring(0,p1) + s[p2] + s.substring(p1+1,p2) + s[p1] + s.substring(p2+1);
 }
 
 function permute(s, position)
